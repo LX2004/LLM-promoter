@@ -67,3 +67,14 @@ python train_ddpm.py
 python generate_promoter.py
 ```
 The trained generative model is stored in the `E_coli_promoter_generation_core_region/model/` folder, while the generated promoter data is stored in the `E_coli_promoter_generation_core_region/sequence/` folder.
+
+# Tips
+To facilitate researchers in utilizing the results of this study, we have stored the final synthesized promoter sequences in the Result folder.
+
+| **File Name** | **Description** |
+|--------------|---------------|
+| Supplementary_file3_generation_promoter_by_VAE.fasta | Synthetic promoter sequences based on VAE |
+| Supplementary_file4_generation_promoter_by_DDPM.fasta | Synthetic promoter sequences based on DDPM |
+| Supplementary_file5_generation_promoter_by_DDPM_core_region.fasta | Promoters based on known core regions and DDPM |
+| Supplementary_file6_generation_promoter_by_random_core_regions.fasta | Promoters composed of known core regions and randomly generated non-core regions |
+
