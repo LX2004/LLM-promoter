@@ -23,13 +23,13 @@ For LLM environment configuration, please refer to:
 - [Self-LLM Gemma2 LoRA Fine-tuning Guide](https://github.com/datawhalechina/self-llm/blob/master/models/Gemma2/04-Gemma-2-9b-it%20peft%20lora%E5%BE%AE%E8%B0%83.md)  
 - [LLaMA Factory](https://github.com/hiyouga/LLaMA-Factory/tree/main)
 
-Or, you can run follow code:
-# Creating Conda Environment from `xxx.yml`
+# Or, you can run follow code:
+## Creating Conda Environment from `xxx.yml`
 
-## Step 1: Ensure Conda is Installed  
+### Step 1: Ensure Conda is Installed  
 Make sure you have Anaconda or Miniconda installed. You can check by running:  
 
 ```bash
 conda --version
 ```
-Then, you can run 
+###
