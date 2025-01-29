@@ -40,5 +40,5 @@ conda env create -f Gemma2_environment.yml
 ```
 conda activate Gemma2
 ```
-
+After setting up the virtual environment, the user can run the `AMP_classification_Gemma2/code/fine_tune_classify_AMP_peptide.py` script to fine-tune the large language model.
 
