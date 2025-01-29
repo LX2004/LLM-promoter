@@ -1,6 +1,6 @@
 # Paper
 
-Code used in the paper:Combining Large Language Model and Diffusion Model for Core Motif Identiffcation and Sequence Generation in High-Performance Promoter Design.
+Code used in the paper: Combining Large Language Model and Diffusion Model for Core Motif Identiffcation and Sequence Generation in High-Performance Promoter Design.
 
 # Framework
 
