@@ -34,6 +34,6 @@ conda --version
 ```
 ### Step 2: Create the Environment
 ```
-conda env create -f xxx.yml
+conda env create -f Gemma2_environment.yml
 ```
 
