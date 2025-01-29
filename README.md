@@ -1,6 +1,6 @@
 # Paper
 
-Code used in the paper: A Hybrid Framework Combining Large Language Model-Based Core Motif Identification and Diffusion Model-Driven Adjacent Sequence Generation for High-Performance Promoter Design.
+Code used in the paper:Combining Large Language Model and Diffusion Model for Core Motif Identiffcation and Sequence Generation in High-Performance Promoter Design.
 
 # Framework
 
@@ -56,3 +56,14 @@ conda env create -f environment.yml
 
 conda activate promoter
 ```
+### Step 2: Train diffusion model
+```
+cd E_coli_promoter_generation_core_region/code
+
+python train_ddpm.py
+```
+### Step 3: Generate promoters
+```
+python generate_promoter.py
+```
+The trained generative model is stored in the `E_coli_promoter_generation_core_region/model/` folder, while the generated promoter data is stored in the `E_coli_promoter_generation_core_region/sequence/` folder.
