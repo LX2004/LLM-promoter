@@ -24,7 +24,7 @@ For LLM environment configuration, please refer to:
 - [LLaMA Factory](https://github.com/hiyouga/LLaMA-Factory/tree/main)
 
 # Or, you can run follow code:
-## Creating Conda Environment from `xxx.yml`
+## Creating Conda Environment from `Gemma2_environment.yml`
 
 ### Step 1: Ensure Conda is Installed  
 Make sure you have Anaconda or Miniconda installed. You can check by running:  
