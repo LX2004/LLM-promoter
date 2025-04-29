@@ -384,12 +384,12 @@ class UNet(nn.Module):
 
         skips = [x]
 
-        for layer in self.downs:  # 进行降采样，将输入的x逐渐压缩
+        for layer in self.downs:  
             x = layer(x, time_emb, y)
             # print('x2.shape = ', x.shape)
             skips.append(x)
         
-        for layer in self.mid:    # 不变，在降采样的最低值处，级联多个模块。
+        for layer in self.mid:
             x = layer(x, time_emb, y)
             # print('x3.shape = ', x.shape)
         
@@ -401,7 +401,7 @@ class UNet(nn.Module):
                 z = skips.pop()
                 # print('y.shape = ', z.shape)
                 
-                x = torch.cat([x, z], dim=1) # 进行上采样，且将之间降采样得到的中间x也作为已知输入。
+                x = torch.cat([x, z], dim=1) 
             x = layer(x, time_emb, y)
 
         x = self.activation(self.out_norm(x))
