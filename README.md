@@ -4,7 +4,7 @@ Code used in the paper: Combining Large Language Model and Diffusion Model for C
 
 # Framework
 
-![image](https://github.com/user-attachments/assets/e834b75f-635b-4943-bc2c-cd1990e59ace)
+![image](https://github.com/user-attachments/assets/2c176dea-8d84-423a-b418-a1f4e221c772)
 
 ### Strength Prediction  
 The LLM (Gemma2) predicts the strength (strong or weak) of an input sequence provided by the user. If the prediction is incorrect, the model is fine-tuned using the LoRA method to improve accuracy.  
