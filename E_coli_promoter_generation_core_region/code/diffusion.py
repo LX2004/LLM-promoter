@@ -111,10 +111,15 @@ class GaussianDiffusion(nn.Module):
             x_partial = torch.tensor(x_partial, dtype=torch.float32)
             x = torch.randn_like(x_partial)
 
-            x[:,:,:,25:35] = x_partial[:,:,:,25:35]
+            # x[:,:,:,25:35] = x_partial[:,:,:,25:35]
+            # x[:,:,:,48:56] = x_partial[:,:,:,48:56]
+            # x[:,:,:,59:62] = x_partial[:,:,:,59:62]
+
+            x[:,:,:,25:28] = x_partial[:,:,:,25:28]
+            x[:,:,:,29:35] = x_partial[:,:,:,29:35]
             x[:,:,:,48:56] = x_partial[:,:,:,48:56]
             x[:,:,:,59:62] = x_partial[:,:,:,59:62]
-
+        
             x = torch.tensor(x, dtype=torch.float32).to(device)
             
             for t in range(self.num_timesteps - 1, -1, -1): 
@@ -142,16 +147,21 @@ class GaussianDiffusion(nn.Module):
         noise = torch.randn_like(x) 
         zero_tensor = torch.zeros_like(x)
 
-        noise[:,:,:,25:35] = zero_tensor[:,:,:,25:35]
+        # noise[:,:,:,25:35] = zero_tensor[:,:,:,25:35]
+        # noise[:,:,:,48:56] = zero_tensor[:,:,:,48:56]
+        # noise[:,:,:,59:62] = zero_tensor[:,:,:,59:62]
+        
+        noise[:,:,:,25:28] = zero_tensor[:,:,:,25:28]
+        noise[:,:,:,29:35] = zero_tensor[:,:,:,29:35]
         noise[:,:,:,48:56] = zero_tensor[:,:,:,48:56]
         noise[:,:,:,59:62] = zero_tensor[:,:,:,59:62]
 
 
 
-
         perturbed_x = self.perturb_x(x, t, noise) 
-
-        perturbed_x[:,:,:,25:35] = x[:,:,:,25:35] 
+        
+        perturbed_x[:,:,:,25:28] = x[:,:,:,25:28] 
+        perturbed_x[:,:,:,29:35] = x[:,:,:,29:35] 
         perturbed_x[:,:,:,48:56] = x[:,:,:,48:56]
         perturbed_x[:,:,:,59:62] = x[:,:,:,59:62]
 
