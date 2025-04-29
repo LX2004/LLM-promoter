@@ -106,7 +106,7 @@ class GaussianDiffusion(nn.Module):
 
     def sample_from_partial_noise(self, x_partial, device, y=None, use_ema=True):
             
-            # x_partial为真实样本
+
 
             x_partial = torch.tensor(x_partial, dtype=torch.float32)
             x = torch.randn_like(x_partial)
