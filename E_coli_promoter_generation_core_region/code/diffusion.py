@@ -115,10 +115,11 @@ class GaussianDiffusion(nn.Module):
             # x[:,:,:,48:56] = x_partial[:,:,:,48:56]
             # x[:,:,:,59:62] = x_partial[:,:,:,59:62]
 
-            x[:,:,:,25:28] = x_partial[:,:,:,25:28]
-            x[:,:,:,29:35] = x_partial[:,:,:,29:35]
-            x[:,:,:,48:56] = x_partial[:,:,:,48:56]
-            x[:,:,:,59:62] = x_partial[:,:,:,59:62]
+
+            x[:,:,:,24:28] = x_partial[:,:,:,24:28]
+            x[:,:,:,29:32] = x_partial[:,:,:,29:32]
+            x[:,:,:,46:56] = x_partial[:,:,:,46:56]
+            x[:,:,:,58:61] = x_partial[:,:,:,58:61]
         
             x = torch.tensor(x, dtype=torch.float32).to(device)
             
@@ -151,19 +152,19 @@ class GaussianDiffusion(nn.Module):
         # noise[:,:,:,48:56] = zero_tensor[:,:,:,48:56]
         # noise[:,:,:,59:62] = zero_tensor[:,:,:,59:62]
         
-        noise[:,:,:,25:28] = zero_tensor[:,:,:,25:28]
-        noise[:,:,:,29:35] = zero_tensor[:,:,:,29:35]
-        noise[:,:,:,48:56] = zero_tensor[:,:,:,48:56]
-        noise[:,:,:,59:62] = zero_tensor[:,:,:,59:62]
+        noise[:,:,:,24:28] = zero_tensor[:,:,:,24:28]
+        noise[:,:,:,29:32] = zero_tensor[:,:,:,29:32]
+        noise[:,:,:,46:56] = zero_tensor[:,:,:,46:56]
+        noise[:,:,:,58:61] = zero_tensor[:,:,:,58:61]
 
 
 
         perturbed_x = self.perturb_x(x, t, noise) 
         
-        perturbed_x[:,:,:,25:28] = x[:,:,:,25:28] 
-        perturbed_x[:,:,:,29:35] = x[:,:,:,29:35] 
-        perturbed_x[:,:,:,48:56] = x[:,:,:,48:56]
-        perturbed_x[:,:,:,59:62] = x[:,:,:,59:62]
+        perturbed_x[:,:,:,24:28] = x[:,:,:,24:28] 
+        perturbed_x[:,:,:,29:32] = x[:,:,:,29:32]
+        perturbed_x[:,:,:,46:56] = x[:,:,:,46:56]
+        perturbed_x[:,:,:,58:61] = x[:,:,:,58:61]
 
 
         estimated_noise = self.model(perturbed_x, t, y) 
@@ -211,3 +212,4 @@ def generate_cosine_schedule(T, s=0.008):
 
 def generate_linear_schedule(T, low, high):
     return np.linspace(low, high, T)
+
