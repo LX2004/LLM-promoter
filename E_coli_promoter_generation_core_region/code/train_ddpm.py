@@ -191,14 +191,18 @@ def create_argparser():
         schedule_high=0.02,
         promoter_length = 81,
 
-        start_1 = 25,
-        end_1 = 35,
+        # core regon
+        start_1 = 24,
+        end_1 = 28,
 
-        start_2 = 48,
-        end_2 = 56,
+        start_2 = 29,
+        end_2 = 32,
 
-        start_3 = 59,
-        end_3 = 62,
+        start_3 = 46,
+        end_3 = 56,
+
+        start_4 = 58,
+        end_4 = 61,
 
     )
 
