@@ -48,7 +48,7 @@ Run the `LLM_prediction/code/make_dataset.py` script to create dataset.
 Run the `LLM_prediction/code/train_llm.py` script to fine-tune LLM.
 
 
-# Gemma2-9B Checkpoints
+#### Gemma2-9B Checkpoints
 
 The checkpoints for **Gemma2-9B** used in this project are stored on Google Drive:
 
