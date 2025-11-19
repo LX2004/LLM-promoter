@@ -41,7 +41,11 @@ conda env create -f Gemma2_environment.yml
 ```
 conda activate Gemma2
 ```
-After setting up the virtual environment, the user can run the `AMP_classification_Gemma2/code/fine_tune_classify_AMP_peptide.py` script to fine-tune the large language model.
+### Step 4-1: AMP classification
+Run the `AMP_classification_Gemma2/code/fine_tune_classify_AMP_peptide.py` script to fine-tune the large language model.
+### Step 4-2: Promoter classification
+Run the `LLM_prediction/code/make_dataset.py` script to create dataset.
+Run the `LLM_prediction/code/train_llm.py` script to fine-tune LLM.
 
 # For generative task
 In this section, we use diffusion model to generate promoters.
