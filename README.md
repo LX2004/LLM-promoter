@@ -47,6 +47,14 @@ Run the `AMP_classification_Gemma2/code/fine_tune_classify_AMP_peptide.py` scrip
 Run the `LLM_prediction/code/make_dataset.py` script to create dataset.
 Run the `LLM_prediction/code/train_llm.py` script to fine-tune LLM.
 
+
+# Gemma2-9B Checkpoints
+
+The checkpoints for **Gemma2-9B** used in this project are stored on Google Drive:
+
+👉 [Gemma2-9B checkpoints on Google Drive](https://drive.google.com/drive/folders/1cAGJvoNa-7ZTkew2dlqBWoSehI2Lty8S?usp=drive_link)
+
+
 # For generative task
 In this section, we use diffusion model to generate promoters.
 
