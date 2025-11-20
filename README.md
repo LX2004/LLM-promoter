@@ -55,7 +55,7 @@ Run the `LLM_prediction/code/train_llm.py` script to fine-tune LLM.
 
 The checkpoints for **Gemma2-9B** used in this project are stored on Google Drive:
 
-👉 [Gemma2-9B checkpoints on Google Drive](https://drive.google.com/drive/folders/1cAGJvoNa-7ZTkew2dlqBWoSehI2Lty8S?usp=drive_link)
+👉 [Gemma2-9B checkpoints on Google Drive]([https://drive.google.com/drive/folders/1cAGJvoNa-7ZTkew2dlqBWoSehI2Lty8S?usp=drive_link](https://drive.google.com/drive/folders/1cAGJvoNa-7ZTkew2dlqBWoSehI2Lty8S?usp=sharing, https://drive.google.com/drive/folders/1yIFfLvL8bbs4hntuKcujRxpnAYl6RWXC?usp=sharing))
 
 
 # For generative task
