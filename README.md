@@ -4,7 +4,8 @@ Code used in the paper: Decoding and Rewiring Promoter Architecture Using Large 
 
 # Framework
 
-![image](https://github.com/user-attachments/assets/2c176dea-8d84-423a-b418-a1f4e221c772)
+<img width="1671" height="1306" alt="image" src="https://github.com/user-attachments/assets/dceebfed-a559-47b0-a905-075a873c28f0" />
+
 
 ### Strength Prediction  
 The LLM (Gemma2) predicts the strength (strong or weak) of an input sequence provided by the user. If the prediction is incorrect, the model is fine-tuned using the LoRA method to improve accuracy.  
