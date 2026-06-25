@@ -4,8 +4,7 @@ Code used in the paper: A hybrid large language model and diffusion framework fo
 
 # Framework
 
-<img width="1671" height="1306" alt="image" src="https://github.com/user-attachments/assets/dceebfed-a559-47b0-a905-075a873c28f0" />
-
+<img width="923" height="709" alt="image" src="https://github.com/user-attachments/assets/79fc1283-e80b-4380-80a2-ee6d3e46563b" />
 
 ### Strength Prediction  
 The LLM (Gemma2) predicts the strength (strong or weak) of an input sequence provided by the user. If the prediction is incorrect, the model is fine-tuned using the LoRA method to improve accuracy.  
