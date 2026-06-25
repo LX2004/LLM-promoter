@@ -1,6 +1,4 @@
-# Paper
-
-Code used in the paper: A hybrid large language model and diffusion framework for rational promoter design.
+# Paper：A hybrid large language model and diffusion framework for rational promoter design.
 
 # Framework
 
