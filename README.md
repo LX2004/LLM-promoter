@@ -42,20 +42,43 @@ conda env create -f Gemma2_environment.yml
 ```
 ### Step 3: Activate the Environment
 ```
-conda activate Gemma2
+conda activate nt_lora
 ```
-### Step 4-1: AMP classification
-Run the `AMP_classification_Gemma2/code/fine_tune_classify_AMP_peptide.py` script to fine-tune the large language model.
-### Step 4-2: Promoter classification
-Run the `LLM_prediction/code/make_dataset.py` script to create dataset.
-Run the `LLM_prediction/code/train_llm.py` script to fine-tune LLM.
 
+### Step 4: Promoter classification
+Before training, place the required base models under `models/`:
 
-#### Gemma2-9B Checkpoints
+```text
+models/
+├── gemma-2-9b-it/
+├── genomeocean-100m/
+└── nt-v2-50m/
+```
 
-The checkpoints for **Gemma2-9B** used in this project are stored on Google Drive:
+If a model is missing, the script will try to download it automatically. Download errors are usually caused by not logging into Hugging Face or lacking model access. Models can also be downloaded manually and placed in the corresponding directory.
 
-👉 [Gemma2-9B checkpoints on Google Drive]([https://drive.google.com/drive/folders/1cAGJvoNa-7ZTkew2dlqBWoSehI2Lty8S?usp=drive_link](https://drive.google.com/drive/folders/1cAGJvoNa-7ZTkew2dlqBWoSehI2Lty8S?usp=sharing, https://drive.google.com/drive/folders/1yIFfLvL8bbs4hntuKcujRxpnAYl6RWXC?usp=sharing))
+To reproduce the reported results, download the trained model weights and place them under:
+
+```text
+trained_model/
+```
+
+Then run:
+
+```bash
+python validate_lora_model.py
+```
+
+Run any training script directly:
+
+```bash
+python train_gemma_opt.py
+python train_gemma_prompt_opt.py
+python train_genomeocean_opt.py
+python train_nt_opt.py
+```
+
+For example, `train_gemma_opt.py` trains Gemma for promoter strength classification. The other `train` scripts follow the same workflow.
 
 
 # For generative task
