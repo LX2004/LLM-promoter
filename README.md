@@ -1,6 +1,6 @@
 # Paper
 
-Code used in the paper: Decoding and Rewiring Promoter Architecture Using Large Language Models and Diffusion Frameworks.
+Code used in the paper: A hybrid large language model and diffusion framework for rational promoter design.
 
 # Framework
 
