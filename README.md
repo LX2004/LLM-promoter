@@ -1,4 +1,4 @@
-# Paper：A hybrid large language model and diffusion framework for rational promoter design.
+# A hybrid large language model and diffusion framework for rational promoter design.
 
 # Framework
 
@@ -23,6 +23,8 @@ Based on the identified core region, a diffusion model reconstructs non-core reg
 For LLM environment configuration, please refer to:
 - [Self-LLM Gemma2 LoRA Fine-tuning Guide](https://github.com/datawhalechina/self-llm/blob/master/models/Gemma2/04-Gemma-2-9b-it%20peft%20lora%E5%BE%AE%E8%B0%83.md)  
 - [LLaMA Factory](https://github.com/hiyouga/LLaMA-Factory/tree/main)
+- **Nucleotide Transformer**: [instadeepai/nucleotide-transformer](https://github.com/instadeepai/nucleotide-transformer)
+- **GenomeOcean**: [jgi-genomeocean/genomeocean](https://github.com/jgi-genomeocean/genomeocean)
 
 Alternatively, you can run the following code to create a virtual environment.
 
