@@ -57,15 +57,20 @@ models/
 
 If a model is missing, the script will try to download it automatically. Download errors are usually caused by not logging into Hugging Face or lacking model access. Models can also be downloaded manually and placed in the corresponding directory.
 
-To reproduce the reported results, download the trained model weights and place them under:
+To reproduce the reported results, download the trained model weights from the following Google Drive link:
+
+[Download trained model weights](https://drive.google.com/drive/folders/1XYLaFE9N9poPbmpT1gaOhEPvMYWutgB4?usp=sharing)
+
+Then place the downloaded model weights under:
 
 ```text
-trained_model/
+LLM_prediction/trained_model/
 ```
 
 Then run:
 
 ```bash
+cd LLM_prediction
 python validate_lora_model.py
 ```
 
