@@ -106,6 +106,8 @@ cd LLM_prediction
 python validate_lora_model.py
 ```
 
+<img width="1106" height="170" alt="image" src="https://github.com/user-attachments/assets/848f94ae-a60c-4d29-88ae-0711ab067b25" />
+
 Run any training script directly:
 
 If your machine has only one GPU, please set the GPU device index to 0 before running the scripts：
