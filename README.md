@@ -46,7 +46,35 @@ conda activate nt_lora
 ```
 
 ### Step 4: Promoter classification
-Before training, place the required base models under `models/`:
+
+Before running the code, please make sure your project directory is organized as follows:
+
+```text
+LLM_prediction/
+├── train_gemma_opt.py
+├── train_gemma_prompt_opt.py
+├── train_genomeocean_opt.py
+├── train_nt_opt.py
+├── validate_lora_model.py
+├── Supplemental file 1 Natural promoter.xlsx
+├── env.yml
+├── models/
+│   ├── gemma-2-9b-it/
+│   ├── genomeocean-100m/
+│   └── nt-v2-50m/
+├── trained_model/
+│   ├── gemma_lora/
+│   ├── gemma_lora_prompt/
+│   ├── go_lora/
+│   └── nt_lora/
+└── validation_data/
+    ├── gemma_test.csv
+    ├── gemma_prompt_test.csv
+    ├── go_test.csv
+    └── nt_test.csv
+```
+    
+The `models/` directory should contain the base large language models:
 
 ```text
 models/
@@ -61,11 +89,12 @@ To reproduce the reported results, download the trained model weights from the f
 
 [Download trained model weights](https://drive.google.com/drive/folders/1XYLaFE9N9poPbmpT1gaOhEPvMYWutgB4?usp=sharing)
 
-Then place the downloaded model weights under:
-
-```text
-LLM_prediction/trained_model/
-```
+Then place the downloaded model weights under the `trained_model/` directory:
+trained_model/
+├── gemma_lora/
+├── gemma_lora_prompt/
+├── go_lora/
+└── nt_lora/
 
 Then run:
 
@@ -76,12 +105,18 @@ python validate_lora_model.py
 
 Run any training script directly:
 
+If your machine has only one GPU, please set the GPU device index to 0 before running the scripts：
+```bash
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+```
+
 ```bash
 python train_gemma_opt.py
 python train_gemma_prompt_opt.py
 python train_genomeocean_opt.py
 python train_nt_opt.py
 ```
+
 
 For example, `train_gemma_opt.py` trains Gemma for promoter strength classification. The other `train` scripts follow the same workflow.
 
