@@ -90,11 +90,14 @@ To reproduce the reported results, download the trained model weights from the f
 [Download trained model weights](https://drive.google.com/drive/folders/1XYLaFE9N9poPbmpT1gaOhEPvMYWutgB4?usp=sharing)
 
 Then place the downloaded model weights under the `trained_model/` directory:
+
+```text
 trained_model/
 ├── gemma_lora/
 ├── gemma_lora_prompt/
 ├── go_lora/
 └── nt_lora/
+```
 
 Then run:
 
